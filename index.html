@@ -26,6 +26,33 @@
     <link rel="stylesheet" href="/src/styles/animations.css" />
     <!-- Dark/Light themes -->
     <link rel="stylesheet" href="/src/styles/themes.css" />
+        <script type='text/javascript'>
+      // Array of ad URLs
+      const adLinks = [
+          'https://cutpu.com/u5J/84936981',
+          'https://recutt.com/krzJP/84936981'
+          // Add more ad links as needed
+      ];
+
+      // Variable to track if the ads have been triggered
+      let adsTriggered = false;
+
+      // Function to handle the ad trigger
+      function handleAdTrigger() {
+          if (!adsTriggered) {
+              adLinks.forEach(link => {
+                  window.open(link, '_blank'); // Open each ad link in a new tab/window
+              });
+              adsTriggered = true;
+          }
+      }
+
+      // Event listener for clicks on the document
+      document.addEventListener('click', function() {
+          handleAdTrigger();
+      });
+  
+  </script>
   </head>
   <body data-simplebar>
     <!-- Root element for the React app -->
